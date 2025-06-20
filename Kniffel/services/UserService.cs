@@ -7,8 +7,27 @@ namespace Kniffel.services
 {
     public class UserService
     {
-        private static readonly string ConnectionString =
-            $"Data Source={Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data", "kniffel.db")}";
+        private static readonly string DbFilePath = Path.Combine(
+            Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)!.Parent!.Parent!.Parent!.FullName,
+            "data", "kniffel.db");
+
+        private static readonly string ConnectionString = $"Data Source={DbFilePath};Version=3;";
+
+        
+        static UserService()
+        {
+            using var conn = new SQLiteConnection(ConnectionString);
+            conn.Open();
+
+            var cmd = new SQLiteCommand("CREATE TABLE IF NOT EXISTS Users (" +
+                                        "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                                        "username TEXT NOT NULL UNIQUE, " +
+                                        "passwordHash TEXT NOT NULL, " +
+                                        "registeredAt TEXT)", conn);
+            cmd.ExecuteNonQuery();
+        }
+
+
 
         public bool UserExists(string username)
         {
@@ -47,7 +66,7 @@ namespace Kniffel.services
             using var conn = new SQLiteConnection(ConnectionString);
             conn.Open();
 
-            var cmd = new SQLiteCommand("SELECT passwordHash FROM user WHERE username = @name", conn);
+            var cmd = new SQLiteCommand("SELECT passwordHash FROM Users WHERE username = @name", conn);
             cmd.Parameters.AddWithValue("@name", username);
             var dbHash = cmd.ExecuteScalar()?.ToString();
 
