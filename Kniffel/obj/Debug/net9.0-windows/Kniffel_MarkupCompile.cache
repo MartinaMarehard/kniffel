@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\App.xaml
-2-376948881
+3-91111725
 
-7-463204418
+8384434318
 206934927449
-views\MainWindow.xaml;views\RegisterWindow.xaml;
+views\LoginWindow.xaml;views\MainWindow.xaml;views\RegisterWindow.xaml;
 
 False
 

@@ -1,12 +1,14 @@
 ﻿using System;
+using System.IO;
 using System.Data.SQLite;
 using Kniffel.models;
 
-namespace Kniffel.Services
+namespace Kniffel.services
 {
     public class UserService
     {
-        private const string ConnectionString = "Data Source=./data/kniffel.db";
+        private static readonly string ConnectionString =
+            $"Data Source={Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data", "kniffel.db")}";
 
         public bool UserExists(string username)
         {
@@ -39,5 +41,21 @@ namespace Kniffel.Services
             var hash = sha.ComputeHash(bytes);
             return Convert.ToBase64String(hash);
         }
+        
+        public bool VerifyPassword(string username, string password)
+        {
+            using var conn = new SQLiteConnection(ConnectionString);
+            conn.Open();
+
+            var cmd = new SQLiteCommand("SELECT passwordHash FROM user WHERE username = @name", conn);
+            cmd.Parameters.AddWithValue("@name", username);
+            var dbHash = cmd.ExecuteScalar()?.ToString();
+
+            if (dbHash == null) return false;
+
+            var inputHash = HashPassword(password);
+            return dbHash == inputHash;
+        }
+
     }
 }

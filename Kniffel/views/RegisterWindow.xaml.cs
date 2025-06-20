@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 using Kniffel.models;
-using Kniffel.Services;
+using Kniffel.services;
 
 namespace Kniffel.views
 {
