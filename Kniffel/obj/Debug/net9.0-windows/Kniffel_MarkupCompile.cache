@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\MartinaMarehard\RiderProjects\Kniffel\Kniffel\obj\Debug\net9.0-windows\
+C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\
 Kniffel
 none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
-C:\Users\MartinaMarehard\RiderProjects\Kniffel\Kniffel\App.xaml
-11407045341
+C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\App.xaml
+2-376948881
 
-4-1691258080
-201668129756
-MainWindow.xaml;
+7-463204418
+206934927449
+views\MainWindow.xaml;views\RegisterWindow.xaml;
 
-True
+False
 
