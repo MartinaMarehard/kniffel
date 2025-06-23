@@ -18,28 +18,34 @@ namespace Kniffel.views
             var username = UsernameBox.Text.Trim();
             var password = PasswordBox.Password;
 
+            Console.WriteLine($"[DEBUG] Username: {username}");
+
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
+                Console.WriteLine("[DEBUG] Benutzername oder Passwort leer");
                 MessageBox.Show("Benutzername und Passwort erforderlich.");
                 return;
             }
 
             if (!service.UserExists(username))
             {
+                Console.WriteLine("[DEBUG] Benutzer nicht gefunden");
                 MessageBox.Show("Benutzer nicht gefunden.");
                 return;
             }
 
             if (!service.VerifyPassword(username, password))
             {
+                Console.WriteLine("[DEBUG] Passwort falsch");
                 MessageBox.Show("Falsches Passwort.");
                 return;
             }
 
-            // Login erfolgreich
+            Console.WriteLine("[DEBUG] Login erfolgreich");
             DialogResult = true;
             Close();
         }
+
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {

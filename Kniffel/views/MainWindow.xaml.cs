@@ -19,5 +19,14 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        Console.WriteLine("[DEBUG] MainWindow Konstruktor");
     }
+    
+
+    protected override void OnClosed(EventArgs e)
+    {
+        base.OnClosed(e);
+        Console.WriteLine("[DEBUG] MainWindow wurde geschlossen");
+    }
+
 }

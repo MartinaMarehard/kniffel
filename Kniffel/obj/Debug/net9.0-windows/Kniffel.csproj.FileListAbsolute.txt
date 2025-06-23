@@ -40,3 +40,4 @@ C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\r
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\views\LoginWindow.baml
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\views\LoginWindow.g.cs
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\bin\Debug\net9.0-windows\data\kniffel.db
+C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\App.baml

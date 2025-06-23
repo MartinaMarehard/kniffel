@@ -10,15 +10,19 @@ namespace Kniffel
             base.OnStartup(e);
 
             var login = new LoginWindow(); 
-            var result = login.ShowDialog();
+            bool? result = login.ShowDialog();
+            Console.WriteLine($"[DEBUG] Login result: {result}");
 
             if (result == true)
             {
                 var mainWindow = new MainWindow();
-                mainWindow.Show();
+                MainWindow = mainWindow;
+                mainWindow.ShowDialog();
+                //mainWindow.Focus();
             }
             else
             {
+                MessageBox.Show("Login wurde abgebrochen.");
                 Shutdown(); // Benutzer hat Login abgebrochen → App schließen
             }
         }
