@@ -75,6 +75,30 @@ namespace Kniffel.services
             var inputHash = HashPassword(password);
             return dbHash == inputHash;
         }
+        
+        public User? GetUserByUsername(string username)
+        {
+            using var conn = new SQLiteConnection(ConnectionString);
+            conn.Open();
+
+            var cmd = new SQLiteCommand("SELECT id, username, passwordHash, registeredAt FROM Users WHERE username = @name", conn);
+            cmd.Parameters.AddWithValue("@name", username);
+
+            using var reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                return new User
+                {
+                    Id = reader.GetInt32(0),
+                    Username = reader.GetString(1),
+                    PasswordHash = reader.GetString(2),
+                    RegisteredAt = DateTime.Parse(reader.GetString(3))
+                };
+            }
+
+            return null;
+        }
+
 
     }
 }

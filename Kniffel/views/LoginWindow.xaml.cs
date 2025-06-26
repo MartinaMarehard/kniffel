@@ -41,7 +41,8 @@ namespace Kniffel.views
                 return;
             }
 
-            Console.WriteLine("[DEBUG] Login erfolgreich");
+            var user = service.GetUserByUsername(username);
+            Session.SessionManager.Login(user);
             DialogResult = true;
             Close();
         }

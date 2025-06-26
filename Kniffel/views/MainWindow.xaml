@@ -1,14 +1,29 @@
 ﻿<Window x:Class="Kniffel.views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Kniffel"
+        xmlns:local="clr-namespace:Kniffel.views"
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="450" 
         Width="800"
         WindowStartupLocation="CenterScreen">
-    
-    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/> <!-- Menü links -->
+            <ColumnDefinition Width="*"/>   <!-- Hauptinhalt -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Menü -->
+        <StackPanel Grid.Column="0" Background="#EEE" Margin="10">
+            <TextBlock Text="Menü" FontWeight="Bold" Margin="0 0 0 10"/>
+            <Button Content="🎲 Würfeln" Click="OpenDiceView_Click" Margin="0 5"/>
+            <Button Content="📊 Statistik" Click="OpenStatsView_Click" Margin="0 5"/>
+            <Button Content="🚪 Logout" Click="Logout_Click" Margin="0 20 0 0"/>
+        </StackPanel>
+
+        <!-- Hauptbereich -->
+        <ContentControl x:Name="MainContent" Grid.Column="1"/>
+    </Grid>
 </Window>

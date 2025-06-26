@@ -1,5 +1,7 @@
 ﻿using System.Text;
 using System.Windows;
+using System.Diagnostics;
+using Kniffel.Session;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -19,14 +21,26 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        Console.WriteLine("[DEBUG] MainWindow Konstruktor");
+
     }
     
-
-    protected override void OnClosed(EventArgs e)
+    private void Logout_Click(object sender, RoutedEventArgs e)
     {
-        base.OnClosed(e);
-        Console.WriteLine("[DEBUG] MainWindow wurde geschlossen");
+        MessageBox.Show("Sie werden ausgeloggt!", "Logout", MessageBoxButton.OK, MessageBoxImage.Information);
+        Application.Current.Shutdown();
     }
+
+    private void OpenDiceView_Click(object sender, RoutedEventArgs e)
+    {
+        MainContent.Content = new DiceView(); // Wird noch erstellt
+    }
+
+    private void OpenStatsView_Click(object sender, RoutedEventArgs e)
+    {
+        MainContent.Content = new StatsView(); // Später
+    }
+
+
+
 
 }
