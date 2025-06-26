@@ -30,14 +30,14 @@ public partial class MainWindow : Window
         Application.Current.Shutdown();
     }
 
-    private void OpenDiceView_Click(object sender, RoutedEventArgs e)
-    {
-        MainContent.Content = new DiceView(); // Wird noch erstellt
-    }
-
     private void OpenStatsView_Click(object sender, RoutedEventArgs e)
     {
-        MainContent.Content = new StatsView(); // Später
+        //MainContent.Content = new StatsView(); // Später
+    }
+
+    private void OpenDiceView_Click(object sender, RoutedEventArgs e)
+    {
+        MainContent.Content = new DiceView();
     }
 
 

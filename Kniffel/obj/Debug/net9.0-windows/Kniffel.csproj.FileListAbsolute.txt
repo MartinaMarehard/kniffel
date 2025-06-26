@@ -41,3 +41,5 @@ C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\v
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\views\LoginWindow.g.cs
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\bin\Debug\net9.0-windows\data\kniffel.db
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\App.baml
+C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\views\DiceView.baml
+C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\views\DiceView.g.cs
