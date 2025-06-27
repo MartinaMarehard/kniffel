@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\App.xaml
-4-246807451
+5840974392
 
-111803599944
+131736974085
 206934927449
-views\DiceView.xaml;views\LoginWindow.xaml;views\MainWindow.xaml;views\RegisterWindow.xaml;
+views\CategoryView.xaml;views\DiceView.xaml;views\LoginWindow.xaml;views\MainWindow.xaml;views\RegisterWindow.xaml;
 
 False
 

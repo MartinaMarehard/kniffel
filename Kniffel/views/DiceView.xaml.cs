@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -30,10 +30,8 @@ namespace Kniffel.views
 
         private void RollDice(object sender, RoutedEventArgs e)
         {
-            if (rollCount >= maxRolls)
-            {
-                return;
-            }
+            if (rollCount >= maxRolls) reachedMaxRolls();
+            
             hasRolledOnce = true;
             rollCount++;
             foreach (var die in Dice)
@@ -75,6 +73,12 @@ namespace Kniffel.views
         private void UpdateRollCount()
         {
             RollCounterText.Text = $"Würfe: {rollCount} / {maxRolls}";
+        }
+
+        private void reachedMaxRolls()
+        {
+            RollButton.Visibility = Visibility.Collapsed;
+            
         }
     }
 }

@@ -43,3 +43,6 @@ C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\bin\Debug\net9.0-windows\d
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\App.baml
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\views\DiceView.baml
 C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\views\DiceView.g.cs
+C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\views\CategoryView.baml
+C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\views\CategoryView.g.cs
+C:\Entwicklung\uebungsprojekte\schule\kniffel\Kniffel\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
