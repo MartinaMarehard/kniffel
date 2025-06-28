@@ -16,7 +16,7 @@ namespace Kniffel.services
         
         static UserService()
         {
-            using var conn = new SQLiteConnection(ConnectionString);
+            using var conn = new SQLiteConnection($"Data Source={DbFilePath};Version=3;");
             conn.Open();
 
             var cmd = new SQLiteCommand("CREATE TABLE IF NOT EXISTS Users (" +

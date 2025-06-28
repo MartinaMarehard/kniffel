@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Kniffel.models;
 
 namespace Kniffel.views;
 
@@ -18,9 +19,16 @@ namespace Kniffel.views;
 /// </summary>
 public partial class MainWindow : Window
 {
+    private GameState gameState;
     public MainWindow()
     {
         InitializeComponent();
+
+        gameState = new GameState
+        {
+            RollCount = 0,
+            UsedCategory = new HashSet<string>()
+        };
 
     }
     
@@ -37,7 +45,10 @@ public partial class MainWindow : Window
 
     private void OpenDiceView_Click(object sender, RoutedEventArgs e)
     {
-        MainContent.Content = new DiceView();
+        var diceView = new DiceView();
+        diceView.DataContext = gameState;
+
+        MainContent.Content = diceView;
     }
 
 

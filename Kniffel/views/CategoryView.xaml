@@ -3,50 +3,150 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Height="Auto" Width="Auto">
 
+    
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-        <Grid Margin="10" VerticalAlignment="Top" Background="Lime">
+        
+        <Grid x:Name="CategoryGrid" Margin="10" VerticalAlignment="Top" MinWidth="200">
+
+            
 
             <!-- Richtig: alle Zeilen definieren -->
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="40" />
             </Grid.ColumnDefinitions>
-
-            <!-- Beispiel -->
+            
             <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
                 <TextBlock Text="Einsen" />
             </Border>
             <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
-                <TextBlock Text="3" />
+                <Button Content="" Click="Category_Click" Tag="Einsen" Padding="5" BorderThickness="0" Background="Transparent" />
             </Border>
 
-            <Border Grid.Row="16" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+            <Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Zweien" />
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Zweien" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Dreien" />
+            </Border>
+            <Border Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Dreien" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="3" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Vieren" />
+            </Border>
+            <Border Grid.Row="3" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Vieren" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="4" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Fünfen" />
+            </Border>
+            <Border Grid.Row="4" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Fünfen" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="5" Grid.Column="0" BorderBrush="Black" BorderThickness="1,1,1,3" Padding="5">
+                <TextBlock Text="Sechsen" />
+            </Border>
+            <Border Grid.Row="5" Grid.Column="1" BorderBrush="Black" BorderThickness="1,1,1,3" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Sechsen" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            <!-- Border dazwischen dicker -->
+            <Border Grid.Row="6" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Summe" />
+            </Border>
+            <Border Grid.Row="6" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock x:Name="Summe" Text="" />
+            </Border>
+            
+            <Border Grid.Row="7" Grid.Column="0" BorderBrush="Black" BorderThickness="1,1,1,3" Padding="5">
+                <TextBlock Text="Bonus" />
+            </Border>
+            <Border Grid.Row="7" Grid.Column="1" BorderBrush="Black" BorderThickness="1,1,1,3" Padding="5">
+                <TextBlock x:Name="Bonus" Text="" />
+            </Border>
+            <!-- Border dazwischen dicker -->
+            <Border Grid.Row="8" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Dreierpasch" />
+            </Border>
+            <Border Grid.Row="8" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Dreierpasch" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="9" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Viererpasch" />
+            </Border>
+            <Border Grid.Row="9" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Viererpasch" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="10" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Full House" />
+            </Border>
+            <Border Grid.Row="10" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Full House" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="11" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Kleine Straße" />
+            </Border>
+            <Border Grid.Row="11" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Kleine Straße" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="12" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Große Straße" />
+            </Border>
+            <Border Grid.Row="12" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Große Straße" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="13" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="Chance" />
+            </Border>
+            <Border Grid.Row="13" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Chance" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            
+            <Border Grid.Row="14" Grid.Column="0" BorderBrush="Black" BorderThickness="1,1,1,3" Padding="5">
+                <TextBlock Text="Kniffel" />
+            </Border>
+            <Border Grid.Row="14" Grid.Column="1" BorderBrush="Black" BorderThickness="1, 1, 1,3" Padding="5">
+                <Button Content="" Click="Category_Click" Tag="Kniffel" Padding="5" BorderThickness="0" Background="Transparent" />
+            </Border>
+            <!-- Border dazwischen dicker -->
+            <Border Grid.Row="15" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5">
                 <TextBlock Text="Gesamt" />
             </Border>
-            <Border Grid.Row="16" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
-                <TextBlock Text="198" />
+            <Border Grid.Row="15" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock x:Name="Gesamt" Text="" />
             </Border>
-
+            
         </Grid>
     </ScrollViewer>
 </UserControl>

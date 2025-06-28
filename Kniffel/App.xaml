@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:Kniffel"
              ShutdownMode="OnExplicitShutdown">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" /> <!-- Standard: z.B. 12 * 1.2 -->
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="14" />
+        </Style>
     </Application.Resources>
+
 </Application>
